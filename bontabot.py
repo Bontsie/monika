@@ -53,7 +53,7 @@ async def on_ready():
     #            cid = channel.id    
 
 def counter (cmd):
-     f = open (cmd, "r")
+     f = open ('data/'+cmd, "r")
      c = f.readline ()
      f.close() 
      c1 = int (c) + 1
