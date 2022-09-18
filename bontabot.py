@@ -53,7 +53,7 @@ async def on_ready():
     #            cid = channel.id    
 
 def counter (cmd):
-     f = open ('data/'+cmd, "r")
+     f = open ('/data/'+cmd, "r")
      c = f.readline ()
      f.close() 
      c1 = int (c) + 1
@@ -61,7 +61,7 @@ def counter (cmd):
          c1 = 69
      
      c = str (c1) 
-     f = open (cmd, "w") 
+     f = open ('/data/'+cmd, "w") 
      f.write (c)
      f.close
      return c
@@ -153,5 +153,5 @@ async def on_message(message):
     elif "!monika" in message.content.lower():
         await message.channel.send('Just Monika. https://imgur.com/gallery/1dz3yOR')
         await bot.process_commands (message)
-#bot.run(getKey())
-bot.run("")
+bot.run(getKey())
+#bot.run("")
